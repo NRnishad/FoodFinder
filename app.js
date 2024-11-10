@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from 'react-dom/client'
+import ReactDOM from "react-dom/client";
 
 const Header = () => (
   <div className="header">
@@ -19,6 +19,7 @@ const Header = () => (
     </div>
   </div>
 );
+
 const resList = [
   {
     id: 1,
@@ -92,48 +93,41 @@ const resList = [
       "Healthy quinoa salad with cucumber, cherry tomatoes, and avocado.",
     price: 9.49,
   },
-  
 ];
 
-
-
 function FoodCard(props) {
-          const { resData } = props
-          const {id,restaurant,img,title,description,price}=resData
+  const { resData } = props;
+  const { id, restaurant, img, title, description, price } = resData;
   return (
     <div className="card">
       <img src={img} alt="image" className="card-image" />
       <div className="card-content">
-        <h2 className= 'title'>{title}</h2>
+        <h2 className="title">{title}</h2>
         <p className="card-description">{description}</p>{" "}
         <p className="card-price">{price}</p>  
       </div>
     </div>
   );
 }
- 
+
 function FoodCardGrid() {
   return (
     <div className="food-card-grid">
-                      {resList.map((restaurant) => (
-               <FoodCard key={restaurant.id} resData={restaurant} />
-     ))}
-                      
-     
+      {resList.map((restaurant) => (
+        <FoodCard key={restaurant.id} resData={restaurant} />
+      ))}
     </div>
   );
 }
 
-
 const AppLayout = () => {
-          return (
-                    <div className="app">
-                              <Header />
-                              <FoodCardGrid/>
-                    </div>
-          )
-}
+  return (
+    <div className="app">
+      <Header />
+      <FoodCardGrid />
+    </div>
+  );
+};
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<AppLayout/>)
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);
