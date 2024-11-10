@@ -4,7 +4,8 @@
           border: 1px solid rgb(39, 32, 31);
 }
 .log{
-          width: 200px;
+          width: 100px;
+          padding: 10px;
 }
 .nav-items{
           padding: 0px 20px;
@@ -18,4 +19,52 @@
 .nav-items > ul >li{
 padding: 10px;
 margin: 10px;
+}
+
+
+
+.food-card-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          padding: 10px;
+          gap: 20px;
+}
+
+
+
+
+.card {
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+          overflow: hidden;
+}
+
+.card-image {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+}
+
+.card-content {
+          padding: 20px;
+}
+
+.card-title {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 10px;
+}
+
+.card-description {
+          font-size: 14px;
+          line-height: 1.5;
+          margin-bottom: 10px;
+}
+
+.card-price {
+          font-size: 16px;
+          font-weight: bold;
+          color: #333;
 }
