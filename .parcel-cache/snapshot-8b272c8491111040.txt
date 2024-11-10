@@ -1,9 +1,9 @@
 5988
-55C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\app.js133756951525207906 0
+55C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\app.js133756959757372896 0
 71C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\env-paths133756916735707681 1
 103C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\source-map-js\lib\source-map-generator.js133756916736650192 0
 84C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\to-regex-range\LICENSE133756916735251693 0
-75C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.5baa4167.js.map133756951527910966 0
+75C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.5baa4167.js.map133756960517299864 0
 106C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\caniuse-lite\data\features\form-attribute.js133756916743823143 0
 107C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\runtime-browser-hmr\src\HMRRuntime.js133756916736293035 0
 98C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\css-tree\cjs\syntax\function\var.cjs133756916740573394 0
@@ -81,7 +81,7 @@
 74C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\lmdb\keys.js133756916740583454 0
 103C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\scheduler\cjs\scheduler.production.min.js133756916736881085 0
 91C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\profiler\src\types.js133756916737001398 0
-53C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist133756951527921009 1
+53C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist133756960559326815 1
 66C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\.bin133756916746600098 1
 93C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\caniuse-lite\data\regions\SM.js133756916745610896 0
 116C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\csso\node_modules\css-tree\lib\syntax\node\Operator.js133756916742892877 0
@@ -124,7 +124,7 @@
 104C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\csso\node_modules\css-tree\data\patch.json133756916743259467 0
 97C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\css-tree\lib\syntax\node\AnPlusB.js133756916740679125 0
 135C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\css-select\node_modules\entities\lib\esm\generated\decode-data-xml.js.map133756916738288921 0
-58C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\style.css133756930048592353 0
+58C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\style.css133756960559169118 0
 89C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\fs\lib\index.js.map133756916737562072 0
 84C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\commander\package.json133756916735793778 0
 125C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\clean\utils.js133756916738972320 0
@@ -3896,7 +3896,7 @@
 82C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\chalk\source\util.js133756916735606737 0
 79C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\caniuse-lite\data133756916743640780 1
 114C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\caniuse-lite\data\features\css-content-visibility.js133756916742300103 0
-72C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.3a01df49.css133756930048769051 0
+72C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.3a01df49.css133756960559316747 0
 96C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\caniuse-lite\data\features\apng.js133756916738158744 0
 82C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\caniuse-lite\LICENSE133756916734871020 0
 85C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@swc\helpers\_\_type_of133756916742259834 1
@@ -5084,7 +5084,7 @@
 111C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\transformer-image\lib\ImageTransformer.js133756916735103895 0
 104C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\transformer-image\lib\loadSharp.js133756916735660928 0
 109C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\transformer-image\lib\validateConfig.js133756916736133486 0
-76C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.3a01df49.css.map133756930048779092 0
+76C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.3a01df49.css.map133756960559326815 0
 94C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\transformer-html\LICENSE133756916734825916 0
 99C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\transformer-html\node_modules133756916723612177 1
 116C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\node_modules\@parcel\optimizer-htmlnano\node_modules\css-select\lib133756916738567844 1
@@ -5986,4 +5986,4 @@
 71C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.1ee12d9f.js133756917099399344 0
 72C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.aefe08f4.css133756917099394314 0
 76C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.aefe08f4.css.map133756917099483310 0
-71C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.5baa4167.js133756951527860754 0
+71C:\Users\nrnis\OneDrive\Desktop\React\FoodFinder\dist\index.5baa4167.js133756960517256912 0
