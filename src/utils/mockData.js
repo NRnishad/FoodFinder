@@ -1,25 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const Header = () => (
-  <div className="header">
-    <div className="log-container">
-      <img
-        className="log"
-        src="https://play-lh.googleusercontent.com/R1TYyE-34iv_Rt_FsCXUeCSqcZXOOdMlNaGJ72gN1LoLltz47-ix6MFbsG0JRx4RVg"
-      ></img>
-    </div>
-    <div className="nav-items">
-      <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-        <li>Cart</li>
-      </ul>
-    </div>
-  </div>
-);
-
 const resList = [
   {
     id: 1,
@@ -84,7 +62,7 @@ const resList = [
       "Traditional soup topped with a layer of melted cheese and croutons.",
     price: 6.99,
   },
-  { 
+  {
     id: 8,
     restaurant: "Vegan Haven",
     img: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/ihdieablaqorjjtyiwd9",
@@ -95,39 +73,5 @@ const resList = [
   },
 ];
 
-function FoodCard(props) {
-  const { resData } = props;
-  const { id, restaurant, img, title, description, price } = resData;
-  return (
-    <div className="card">
-      <img src={img} alt="image" className="card-image" />
-      <div className="card-content">
-        <h2 className="title">{title}</h2>
-        <p className="card-description">{description}</p>{" "}
-        <p className="card-price">{price}</p>  
-      </div>
-    </div>
-  );
-}
 
-function FoodCardGrid() {
-  return (
-    <div className="food-card-grid">
-      {resList.map((restaurant) => (
-        <FoodCard key={restaurant.id} resData={restaurant} />
-      ))}
-    </div>
-  );
-}
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      <Header />
-      <FoodCardGrid />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default resList;
