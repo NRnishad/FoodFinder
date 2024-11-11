@@ -68,3 +68,30 @@ margin: 10px;
           font-weight: bold;
           color: #333;
 }
+
+
+.filter-button {
+          background-color: #eeec70;
+          width: 100px;
+          height: 50px;
+        
+          color: rgb(14, 10, 10);
+          
+          padding: 10px 20px;
+         
+          border: none;
+        
+          border-radius: 5px;
+          
+          cursor: pointer;
+
+          font-size: 16px;
+          
+          transition: background-color 0.3s;
+          
+}
+
+.filter-button:hover {
+          background-color: #f3e246;
+          /* Darker green on hover */
+}
