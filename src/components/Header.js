@@ -1,4 +1,5 @@
-import {LOGO} from "../utils/constants";
+import { LOGO,URLIMG } from "../utils/constants";
+
 const Header = () => (
   <div className="header">
     <div className="log-container">

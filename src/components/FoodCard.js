@@ -1,17 +1,21 @@
-function FoodCard(props) {
-  const { resData } = props;
-  const { id, restaurant, img, title, description, price } = resData;
+import { IMG_LINK } from "../utils/constants";
+function FoodCard({ resData } ) {
+
+  const { name, cloudinaryImageId, avgRating } = resData.info;
   return (
     <div className="card">
-      <img src={img} alt="image" className="card-image" />
+      <img
+        src={IMG_LINK + cloudinaryImageId}
+        alt="image"
+        className="card-image"
+      />
       <div className="card-content">
-        <h2 className="title">{title}</h2>
-        <p className="card-description">{description}</p>{" "}
-        <p className="card-price">{price}</p>  
+        <h2 className="title">{name}</h2>
+        <h5>{resData.info.cuisines[0]}</h5>
+        <p className="card-price">{avgRating}</p>  
       </div>
     </div>
   );
 }
-
 
 export default FoodCard;
