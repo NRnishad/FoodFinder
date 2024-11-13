@@ -21,10 +21,8 @@ function FoodCardGrid() {
 
   }
   
-  if (cardList.length === 0) {
-    return <Shimmer/>
-  }
-    return (
+  
+  return (cardList.length === 0)?(<Shimmer/>):(
       <div className="food-card-grid">
         <div>
           <button
