@@ -11,7 +11,7 @@ function FoodCard({ resData } ) {
       />
       <div className="card-content">
         <h2 className="title">{name}</h2>
-        <h5>{resData.info.cuisines[0]}</h5>
+        {/* <h5>{resData.info.cuisines[0]}</h5> */}
         <p className="card-price">{avgRating}</p>  
       </div>
     </div>
