@@ -1,10 +1,10 @@
 import FoodCard from './FoodCard';
 import resList from '../utils/mockData'
 import { useState ,useEffect} from 'react';
-
+import Shimmer from './Shimmer';
 
 function FoodCardGrid() {
-  const [cardList, setCardList] = useState(resList)
+  const [cardList, setCardList] = useState([])
 
   useEffect(() => {
     fetchData()
@@ -21,7 +21,9 @@ function FoodCardGrid() {
 
   }
   
-
+  if (cardList.length === 0) {
+    return <Shimmer/>
+  }
     return (
       <div className="food-card-grid">
         <div>

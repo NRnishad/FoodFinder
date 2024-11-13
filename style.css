@@ -95,3 +95,20 @@ margin: 10px;
           background-color: #f3e246;
           /* Darker green on hover */
 }
+
+
+.shimmer-container{
+          display: flex;
+          flex-wrap: wrap;
+}
+
+.shimmer-card{
+          margin: 20px;
+          width: 200px;
+          height: 400px;
+          border: 1px solid #ccc;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 20px;
+                    overflow: hidden;
+}
