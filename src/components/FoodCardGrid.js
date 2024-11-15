@@ -5,6 +5,7 @@ import Shimmer from './Shimmer';
 
 function FoodCardGrid() {
   const [cardList, setCardList] = useState([])
+  const [filterList,setFilterList] = useState([])
 
   useEffect(() => {
     fetchData()
@@ -18,45 +19,54 @@ function FoodCardGrid() {
     const { infoWithStyle } = json.data?.cards[1]?.card?.card?.gridElements;
    let list = infoWithStyle.restaurants
     setCardList(infoWithStyle.restaurants);
+setFilterList(infoWithStyle.restaurants);
 
   }
    const [searchText,setSearchText]=useState('')
   
-  return (cardList.length === 0) ? (<Shimmer />) : (
-    <div className='boy'>
-<div>
-          <button
-           className="filter-button"
+  return cardList.length === 0 ? (
+    <Shimmer />
+  ) : (
+    <div className="boy">
+      <div>
+        <button
+          className="filter-button"
           // onClick={() => {
           //   const filteredList = resList.filter((res) => res.price > 10);
           //   setCardList(filteredList);
           // }}
-          >
-            filter
+        >
+          filter
         </button>
-        <div className='search'>
-          <input type='text' className='search-box' value={searchText} onChange={(e) => {
-            setSearchText(e.target.value)
-          }}></input>
-          <button onClick={() => {
-          let filterdRestaurant = list.filter((res) =>
-            res.info.name.includes(searchText)
-          );
-            setCardList(filterdRestaurant);
-          }}>
+        <div className="search">
+          <input
+            type="text"
+            className="search-box"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
+          ></input>
+          <button
+            onClick={() => {
+              let filterdRestaurant = cardList.filter((res) =>
+                res.info.name.toLowerCase().includes(searchText.toLowerCase())
+              );
+              setFilterList(filterdRestaurant);
+            }}
+          >
+            search
+          </button>
+        </div>
+      </div>
 
-          search</button>
-        </div>
-        </div>
-    
       <div className="food-card-grid">
-        
-
-        {cardList.map((res) => {
+        {filterList.map((res) => {
           return <FoodCard key={res.info.resId} resData={res} />;
         })}
-      </div></div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default FoodCardGrid;
