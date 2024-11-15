@@ -6,8 +6,7 @@ import Shimmer from './Shimmer';
 function FoodCardGrid() {
   const [cardList, setCardList] = useState([])
   const [filterList,setFilterList] = useState([])
-
-  useEffect(() => {
+ useEffect(() => {
     fetchData()
   }, []);
 
