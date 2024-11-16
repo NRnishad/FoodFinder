@@ -5,30 +5,37 @@ import FoodCardGrid from './components/FoodCardGrid'
 import About from "./components/About";
 import Contact from "./components/contact";
 import Error from "./components/Error";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <FoodCardGrid />
+      <Outlet />
     </div>
   );
 };
 
 const appRouter = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <AppLayout />,
-    errorElement:<Error/>  },
-  {
-    path: '/about',
-    element:<About/>
-  }, {
-    path: '/contact',
-    element:<Contact/>
-  }
-
-])
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <FoodCardGrid />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+    ],
+  },
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router= { appRouter } />);
