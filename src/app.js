@@ -4,6 +4,7 @@ import Header from './components/Header'
 import FoodCardGrid from './components/FoodCardGrid'
 import About from "./components/About";
 import Contact from "./components/contact";
+import Error from "./components/Error";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 
 const AppLayout = () => {
@@ -18,8 +19,8 @@ const AppLayout = () => {
 const appRouter = createBrowserRouter([
   {
     path: '/',
-    element:<AppLayout/>
-  },
+    element: <AppLayout />,
+    errorElement:<Error/>  },
   {
     path: '/about',
     element:<About/>
