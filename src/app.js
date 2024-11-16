@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from './components/Header'
 import FoodCardGrid from './components/FoodCardGrid'
 import About from "./components/About";
+import Contact from "./components/contact";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 
 const AppLayout = () => {
@@ -22,6 +23,9 @@ const appRouter = createBrowserRouter([
   {
     path: '/about',
     element:<About/>
+  }, {
+    path: '/contact',
+    element:<Contact/>
   }
 
 ])
