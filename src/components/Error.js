@@ -1,15 +1,17 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useRouteError } from "react-router-dom";
 
 const Error = () => {
+          const err = useRouteError()
           const navigate = useNavigate();
           const handleGoHome = () => {
                     navigate('/');
           }
+          console.log(err)
   return (
     <div className="error-page-container">
       <div className="error-page-content">
-        <h1 className="error-code">404</h1>
-        <h2 className="error-message">Oops! Page Not Found</h2>
+        <h1 className="error-code">{err.status}</h1>
+        <h2 className="error-message">{err.statusText}</h2>
         <p className="error-description">
           The page you're looking for doesn't exist. It might have been removed
           or the URL might be incorrect.
