@@ -1,13 +1,13 @@
-import FoodCard from './FoodCard';
-import resList from '../utils/mockData'
-import { useState ,useEffect} from 'react';
-import Shimmer from './Shimmer';
+import FoodCard from "./FoodCard";
+import resList from "../utils/mockData";
+import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 
 function FoodCardGrid() {
-  const [cardList, setCardList] = useState([])
-  const [filterList,setFilterList] = useState([])
- useEffect(() => {
-    fetchData()
+  const [cardList, setCardList] = useState([]);
+  const [filterList, setFilterList] = useState([]);
+  useEffect(() => {
+    fetchData();
   }, []);
 
   const fetchData = async () => {
@@ -16,13 +16,12 @@ function FoodCardGrid() {
     );
     const json = await data.json();
     const { infoWithStyle } = json.data?.cards[1]?.card?.card?.gridElements;
-   let list = infoWithStyle.restaurants
+    let list = infoWithStyle.restaurants;
     setCardList(infoWithStyle.restaurants);
-setFilterList(infoWithStyle.restaurants);
+    setFilterList(infoWithStyle.restaurants);
+  };
+  const [searchText, setSearchText] = useState("");
 
-  }
-   const [searchText,setSearchText]=useState('')
-  
   return cardList.length === 0 ? (
     <Shimmer />
   ) : (
