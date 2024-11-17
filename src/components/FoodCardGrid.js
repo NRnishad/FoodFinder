@@ -2,7 +2,7 @@ import FoodCard from "./FoodCard";
 import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
-
+import Header from "./Header";
 function FoodCardGrid() {
   const [cardList, setCardList] = useState([]);
   const [filterList, setFilterList] = useState([]);
@@ -25,7 +25,9 @@ function FoodCardGrid() {
   return cardList.length === 0 ? (
     <Shimmer />
   ) : (
-    <div className="boy">
+      
+      <div className="boy">
+        <div><Header /></div>
       <div>
         <button
           className="filter-button"
