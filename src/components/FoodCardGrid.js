@@ -2,12 +2,10 @@ import FoodCard from "./FoodCard";
 import useFetch from "../utils/useFetch"; // Importing the custom hook
 import Shimmer from "./Shimmer";
 import Header from "./Header";
+import { API_URL } from "../utils/constants";
 import { useState } from "react";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 function FoodCardGrid() {
-  const API_URL =
-    "https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.0260688&lng=76.3124753&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
-
   const data = useFetch(API_URL); // Using the custom hook
   const [filterList, setFilterList] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -18,7 +16,10 @@ function FoodCardGrid() {
       data.data?.cards[1]?.card?.card?.gridElements || {};
     setFilterList(infoWithStyle?.restaurants || []);
   }
-
+  const onlineStatus = useOnlineStatus() 
+  if (onlineStatus === false) {
+  return <h1> please check the internet .... </h1>
+}
   return !data ? (
     <Shimmer />
   ) : (
