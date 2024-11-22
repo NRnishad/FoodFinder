@@ -1,40 +1,35 @@
 import FoodCard from "./FoodCard";
-import resList from "../utils/mockData";
-import { useState, useEffect } from "react";
+import useFetch from "../utils/useFetch"; // Importing the custom hook
 import Shimmer from "./Shimmer";
 import Header from "./Header";
-function FoodCardGrid() {
-  const [cardList, setCardList] = useState([]);
-  const [filterList, setFilterList] = useState([]);
-  useEffect(() => {
-    fetchData();
-  }, []);
+import { useState } from "react";
 
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.0260688&lng=76.3124753&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-    const { infoWithStyle } = json.data?.cards[1]?.card?.card?.gridElements;
-    let list = infoWithStyle.restaurants;
-    setCardList(infoWithStyle.restaurants);
-    setFilterList(infoWithStyle.restaurants);
-  };
+function FoodCardGrid() {
+  const API_URL =
+    "https://www.swiggy.com/dapi/restaurants/list/v5?lat=10.0260688&lng=76.3124753&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+
+  const data = useFetch(API_URL); // Using the custom hook
+  const [filterList, setFilterList] = useState([]);
   const [searchText, setSearchText] = useState("");
 
-  return cardList.length === 0 ? (
+  // Parse and set filtered list when data is fetched
+  if (data && filterList.length === 0) {
+    const { infoWithStyle } =
+      data.data?.cards[1]?.card?.card?.gridElements || {};
+    setFilterList(infoWithStyle?.restaurants || []);
+  }
+
+  return !data ? (
     <Shimmer />
   ) : (
-      
-      <div className="boy">
-        <div><Header /></div>
+    <div className="boy">
+      <div>
+        <Header />
+      </div>
       <div>
         <button
           className="filter-button"
-          // onClick={() => {
-          //   const filteredList = resList.filter((res) => res.price > 10);
-          //   setCardList(filteredList);
-          // }}
+          // Add filter logic here if needed
         >
           filter
         </button>
@@ -49,10 +44,10 @@ function FoodCardGrid() {
           ></input>
           <button
             onClick={() => {
-              let filterdRestaurant = cardList.filter((res) =>
+              const filteredRestaurant = filterList.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-              setFilterList(filterdRestaurant);
+              setFilterList(filteredRestaurant);
             }}
           >
             search
