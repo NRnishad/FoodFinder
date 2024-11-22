@@ -16,10 +16,10 @@ function FoodCardGrid() {
       data.data?.cards[1]?.card?.card?.gridElements || {};
     setFilterList(infoWithStyle?.restaurants || []);
   }
-  const onlineStatus = useOnlineStatus() 
-  if (onlineStatus === false) {
-  return <h1> please check the internet .... </h1>
-}
+//   const onlineStatus = useOnlineStatus() 
+//   if (onlineStatus === false) {
+//   return <h1> please check the internet .... </h1>
+// }
   return !data ? (
     <Shimmer />
   ) : (
