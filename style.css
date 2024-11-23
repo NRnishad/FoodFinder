@@ -1,4 +1,4 @@
-.header a{
+/*.header a{
           text-decoration-line: none;
           color: #333;
 }
@@ -98,7 +98,7 @@ margin: 10px;
 
 .filter-button:hover {
           background-color: #f3e246;
-          /* Darker green on hover */
+         
 }
 
 
@@ -141,8 +141,7 @@ margin: 10px;
 
 .log-button:hover {
           background-color: #c47b29;
-          /* Darker green on hover */
-}
+        
 
 
 .about-container {
@@ -231,6 +230,12 @@ margin: 10px;
           transition: background-color 0.3s ease;
 }
 
-.error-button:hover {
+ .error-button:hover {
           background-color: #2a3f7a;
-}
+} */
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
