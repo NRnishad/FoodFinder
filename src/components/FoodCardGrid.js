@@ -1,4 +1,4 @@
-import FoodCard from "./FoodCard";
+import FoodCard ,{VegRes} from "./FoodCard";
 import useFetch from "../utils/useFetch"; // Custom hook for data fetching
 import Shimmer from "./Shimmer";
 import Header from "./Header";
@@ -11,7 +11,7 @@ function FoodCardGrid() {
   const [cardList, setCardList] = useState([]); // Full list of restaurants
   const [filterList, setFilterList] = useState([]); // Filtered list of restaurants
   const [searchText, setSearchText] = useState("");
-
+let VegRest = VegRes(FoodCard)
   // Update the card list when data is fetched
   useEffect(() => {
     if (data) {
@@ -20,6 +20,7 @@ function FoodCardGrid() {
       const restaurants = infoWithStyle?.restaurants || [];
       setCardList(restaurants);
       setFilterList(restaurants);
+      
     }
   }, [data]);
 
@@ -70,9 +71,13 @@ function FoodCardGrid() {
       </div>
 
       <div className="food-card-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-        {filterList.map((res) => (
-          <FoodCard key={res.info.resId} resData={res} />
-        ))}
+        {filterList.map((res) =>
+          res.info.veg ? (
+            <VegRest key={res.info.resId} resData={res}/>
+          ) : (
+            <FoodCard key={res.info.resId} resData={res} />
+          )
+        )}
       </div>
     </div>
   );
